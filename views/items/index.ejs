@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items Index</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="index-header-div">
+        <h1>All Items</h1>
+        <a class="add-fruit" href="/items/new">Add Item</a>
+    </div>
+    <ul>
+        <% items.forEach(item => { %>
+            <li><a class="fruit-cards" href="/items/<%= item._id %>"><%= item.name %></a></li>
+        <% }) %>
+    </ul>
+</body>
+</html>
