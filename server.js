@@ -35,6 +35,7 @@ app.use(
         saveUninitialized: true,
     })
 )
+app.use(express.static(path.join(__dirname, "public")))
 
 // Routes
 
