@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit <%= item.name %></title>
+    <title>Edit <%= item.model %></title>
     <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
-    <h1>Edit <%= item.name %></h1>
+    <h1>Edit <%= item.model %></h1>
 
     <form action="/items/<%=item._id%>?_method=PUT" method="POST">
         <div>
@@ -31,5 +31,6 @@
     <a class="items-index-link" href="/items">
         <div class="index-link-text">Back to All Items</div>
     </a>
+
 </body>
 </html>

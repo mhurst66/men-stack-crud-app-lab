@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= item.model %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="fruit-details">
+
+        <h1><%= item.model %></h1>
+        <h2><%= item.make %></h2>
+        <p><%= item.year %></p>
+        <p><%= item.description %></p>
+
+        <div class="fruit-actions">
+            <form class="delete-form" action="/items/<%=item._id%>?_method=DELETE" method="POST">
+            <button class="delete-button" type="submit">Delete <%= item.name %></button>
+            </form>
+            <a class="edit-link" href="/items/<%= item._id %>/edit"><div class="edit-text">Edit <%= item.model %></div>
+            </a>
+        </div>
+
+    </div>
+
+    <a class="fruits-index-link" href="/items">
+        <div class="index-link-text">Back to All Items</div>
+    </a>
+
+</body>
+</html>

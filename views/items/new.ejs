@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Item</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <h1>Create a New Item Listing!</h1>
+
+    <form action="/items" method="POST">
+        <div>
+            <label for="make">Make:</label>
+            <input type="text" name="make" id="make" />
+        </div>
+        <div>
+            <label for="model">Model:</label>
+            <input type="text" name="model" id="model" />
+        </div>
+        <div>
+            <label for="year">Year</label>
+            <input type="number" name="year" id="year" />
+        </div>
+        <div>
+            <label for="description">Description:</label>
+            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+        </div>
+        <button type="submit">Add Item</button>
+    </form>
+    <a class="items-index-link" href="/items">
+        <div class="index-link-text">Back to All Items</div>
+    </a>
+    
+</body>
+</html>
