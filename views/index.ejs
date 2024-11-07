@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=`, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
     <% if (user) { %>
@@ -12,7 +13,7 @@
             <a href="/auth/sign-out">Sign Out</a>
         </p>
     <% } else { %>
-        <h1>Welcome to The Gear Corner, guest!</h1>
+        <h1>Welcome to The Gear Corner, Guest!</h1>
         <p>
             <a href="/auth/sign-up">Sign Up</a> or <a href="/auth/sign-in">Sign In</a>
         </p>
