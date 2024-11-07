@@ -7,7 +7,7 @@ const app = express();
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const morgan = require("morgan");
-
+const path = require("path")
 const session = require('express-session')
 
 // Set the port from environment variable or default to 3000

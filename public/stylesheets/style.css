@@ -11,7 +11,7 @@ body {
 }
   
 h1 {
-    color: #769642;
+    color: cadetblue;
     font-size: 3.6em;
 }
   
@@ -215,7 +215,7 @@ li {
     text-decoration: none;
     width: 6em;
     text-transform: uppercase;
-    background-color: #769642;
+    background-color: cadetblue;
     border-radius: 30px;
     color: white;
     padding: 10px;
