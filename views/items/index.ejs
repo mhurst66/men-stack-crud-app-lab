@@ -9,7 +9,12 @@
 <body>
     <div class="index-header-div">
         <h1>All Items</h1>
-        <a class="add-fruit" href="/items/new">Add Item</a>
+        <% if (user) { %>
+            <p>Signed in as <%= user.username %></p>
+            <a class="add-fruit" href="/items/new">Add Item</a>
+        <% } else { %>
+            <p>Sign In to Add Gear!</p>
+        <% } %>
     </div>
     <ul>
         <% items.forEach(item => { %>

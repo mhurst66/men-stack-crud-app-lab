@@ -34,7 +34,14 @@ router.post("/sign-up", async (req, res) => {
     const hashedPassword = bcrypt.hashSync(req.body.password, 10)
     req.body.password = hashedPassword
     const user = await User.create(req.body)
-    res.send(`Thanks for signing up ${user.username}`)
+    // res.send(`Thanks for signing up ${user.username}`)
+    req.session.user = {
+        username: user.username,
+      };
+      
+      req.session.save(() => {
+        res.redirect("/");
+      });      
 })
 
 // POST the sign in info to the database (checks if the user has correct credentials)
@@ -66,5 +73,4 @@ router.post("/sign-in", async (req, res) => {
         res.redirect("/")
     })
 
-    // res.redirect("/")
 })

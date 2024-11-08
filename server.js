@@ -15,7 +15,8 @@ const MongoStore = require("connect-mongo")
 const port = process.env.PORT ? process.env.PORT : "3000";
 // Import the authController
 const authController = require("./controllers/auth.js");
-const Item = require("./models/item.js");
+// const User = require("../models/user.js")
+const Item = require("./models/item.js")
 
 mongoose.connect(process.env.MONGODB_URI);
 
@@ -67,7 +68,7 @@ app.use("/auth", authController)
 // Render full database
 app.get("/items", async (req, res) => {
   const allItems = await Item.find()
-  res.render("items/index.ejs", { items: allItems })
+  res.render("items/index.ejs", { items: allItems, user: req.session.user })
 })
 // items/new.ejs 
 app.get("/items/new", (req, res) => {
