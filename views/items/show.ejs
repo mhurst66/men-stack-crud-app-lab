@@ -15,11 +15,13 @@
         <p><%= item.description %></p>
 
         <div class="fruit-actions">
-            <form class="delete-form" action="/items/<%=item._id%>?_method=DELETE" method="POST">
-            <button class="delete-button" type="submit">Delete <%= item.model %></button>
-            </form>
-            <a class="edit-link" href="/items/<%= item._id %>/edit"><div class="edit-text">Edit <%= item.model %></div>
-            </a>
+            <% if (user) { %>
+                <form class="delete-form" action="/items/<%=item._id%>?_method=DELETE" method="POST">
+                <button class="delete-button" type="submit">Delete <%= item.model %></button>
+                </form>
+                <a class="edit-link" href="/items/<%= item._id %>/edit"><div class="edit-text">Edit <%= item.model %></div>
+                </a>
+            <% } %>
         </div>
 
     </div>

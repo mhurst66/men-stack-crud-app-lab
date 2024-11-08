@@ -78,7 +78,7 @@ app.get("/items/new", (req, res) => {
 // SHOW a specific Item
 app.get("/items/:itemId", async (req, res) => {
   const foundItem = await Item.findById(req.params.itemId)
-  res.render("items/show.ejs", { item: foundItem })
+  res.render("items/show.ejs", { item: foundItem, user: req.session.user })
 })
 // EDIT ROUTE
 app.get("/items/:itemID/edit", async (req, res) => {

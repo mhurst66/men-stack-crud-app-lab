@@ -8,17 +8,18 @@
 </head>
 <body>
     <% if (user) { %>
-        <h1>Welcome to The Gear Corner, <%= user.username %>!</h1>
+        <h1>Welcome back to The Gear Corner!</h1>
+        <h2>Let's add in some new gear, <%= user.username %>!</h2>
         <p>
             <a href="/auth/sign-out">Sign Out</a>
         </p>
     <% } else { %>
-        <h1>Welcome to The Gear Corner, Guest!</h1>
+        <h1>Welcome to The Gear Corner!</h1>
+        <p>Check out the gear you see us wield onstage!</p>
         <p>
             <a href="/auth/sign-up">Sign Up</a> or <a href="/auth/sign-in">Sign In</a>
         </p>
     <% } %>
-    <p>Check out the gear you see us wield onstage!</p>
     <!-- <p>
         <a href="/vip-lounge">Get into the VIP Users Only Lounge</a>
     </p> -->
@@ -27,7 +28,7 @@
     src="https://cdn-icons-png.flaticon.com/128/5312/5312448.png"
     alt="happy fruit salad bowl"
     /> -->
-    <a class="items-index-link" href="/items">
+    <a class="fruits-index-link" href="/items">
       <div class="index-link-text">Browse Gear</div>
     </a>
 </body>

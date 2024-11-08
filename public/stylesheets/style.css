@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap");
 
 body {
-    background: #fff8ed;
+    background: #facd86;
     font-family: "DM Sans", sans-serif;
     display: flex;
     flex-direction: column;
@@ -13,6 +13,10 @@ body {
 h1 {
     color: cadetblue;
     font-size: 3.6em;
+}
+
+h2 {
+    font-weight: normal;
 }
   
 footer {
@@ -34,7 +38,7 @@ footer {
 }
   
 .index-link-text {
-    background-color: #f47b5b;
+    background-color: maroon;
     color: white;
     font-size: 1.4em;
     width: 10em;
@@ -42,11 +46,11 @@ footer {
     margin: 15px;
     border-radius: 25px;
     text-align: center;
-    box-shadow: 0 5px #ffbd59;
+    box-shadow: 0 5px #d98f8f;
 }
   
 .index-link-text:hover {
-    background-color: #ffbd59;
+    background-color: #c578aa;
     box-shadow: 0 5px #f47b5b;
 }
   
