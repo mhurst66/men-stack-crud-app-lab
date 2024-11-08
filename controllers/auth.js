@@ -16,8 +16,9 @@ router.get("/sign-in", (req, res) => {
 })
 // GET sign OUT page
 router.get("/sign-out", (req, res) => {
-    req.session.destroy()
-    res.redirect("/")
+    req.session.destroy(() => {
+        res.redirect("/")
+    })
 })
 
 // POST the user info to database
@@ -25,7 +26,7 @@ router.post("/sign-up", async (req, res) => {
     // res.send("Form submission successful")
     const userInDatabase = await User.findOne({ username: req.body.username })
     if (userInDatabase) {
-        return res.send("Username already taken.")
+        return res.send("Username Invaild.")
     }
     if (req.body.password !== req.body.confirmPassword) {
         return res.send("Password and Confirm Password must match!")
@@ -60,5 +61,10 @@ router.post("/sign-in", async (req, res) => {
         username: userInDatabase.username,
         _id: userInDatabase._id
     }
-    res.redirect("/")
+
+    req.session.save(() => {
+        res.redirect("/")
+    })
+
+    // res.redirect("/")
 })
