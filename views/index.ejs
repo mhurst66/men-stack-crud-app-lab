@@ -10,23 +10,48 @@
     <% if (user) { %>
         <h1>Welcome back to The Gear Corner!</h1>
         <h2>Let's add in some new gear, <%= user.username %>!</h2>
-        <p>
-            <a href="/auth/sign-out">Sign Out</a>
-        </p>
+        <img
+            class="fruit-pic1"
+            src="../men-stack-crud-app-lab/alfredbgog.jpg"
+            alt="Alfred Be Loud Logo"
+        />
+        <a class="fruits-index-link" href="/auth/sign-out">
+            <div class="index-link-text">
+                Sign Out
+            </div>
+        </a>
     <% } else { %>
-        <h1>Welcome to The Gear Corner!</h1>
+        <h1>Welcome to Alfred Be Loud's Gear Corner!</h1>
         <p>Check out the gear you see us wield onstage!</p>
-        <p>
-            <a href="/auth/sign-up">Sign Up</a> or <a href="/auth/sign-in">Sign In</a>
-        </p>
+        <img
+            class="fruit-pic1"
+            src="../men-stack-crud-app-lab/alfredbgog.jpg"
+            alt="Alfred Be Loud Logo"
+        />
+        <a class="fruits-index-link" href="/auth/sign-in">
+            <div class="index-link-text">
+                Sign In
+            </div>
+        </a>
     <% } %>
-    <img
-    class="fruit-pic1"
-    src="./alfredbgog.jpg"
-    alt="Alfred Be Loud Logo"
-    />
     <a class="fruits-index-link" href="/items">
       <div class="index-link-text">Browse Gear</div>
     </a>
+    <a class="fruits-index-link" href="https://open.spotify.com/artist/3Y1qaUdkom1ZWU1f5yG3EC?si=CCL-S8G_RY-yDJNeALHATQ">
+        <div class="index-link-text">
+            Hear our Music
+        </div>
+    </a>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+<!-- CODE GRAVEYARD -->
+<!-- <a href="/auth/sign-up">Sign Up</a> or  -->

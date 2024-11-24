@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap");
 
 body {
-    background: #facd86;
+    background: #0b0b0b;
     font-family: "DM Sans", sans-serif;
     display: flex;
     flex-direction: column;
@@ -11,12 +11,16 @@ body {
 }
   
 h1 {
-    color: cadetblue;
+    color: aqua;
     font-size: 3.6em;
 }
 
 h2 {
     font-weight: normal;
+}
+
+p {
+    color: aqua
 }
   
 footer {
